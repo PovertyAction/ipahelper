@@ -1,0 +1,28 @@
+v 4.1.0
+d 'IPAHELPER': IPA Ancilliary Stata commands
+d
+d KW: Ancilliary
+d
+d Requires: Stata version 17
+d
+d Distribution-Date: 20240404
+d
+d Authors: Innovations for Poverty Action
+d Support: researchsupport@poverty-action.org
+f ado/ipahelper.ado
+f ado/ipacellcolor.ado
+f ado/ipacellfont.ado
+f ado/ipacelltext.ado
+f ado/ipacolformat.ado
+f ado/ipacolwidth.ado
+f ado/iparowformat.ado
+f ado/iparowline.ado
+d
+f sthlp/ipahelper.ado
+f sthlp/ipacellcolor.ado
+f sthlp/ipacellfont.ado
+f sthlp/ipacelltext.ado
+f sthlp/ipacolformat.ado
+f sthlp/ipacolwidth.ado
+f sthlp/iparowformat.ado
+f sthlp/iparowline.ado
