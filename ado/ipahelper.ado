@@ -2,7 +2,7 @@
 *! Innovations for Poverty Action
 * ipahelper: IPA Ancilliary Stata Programs
 
-program helper, rclass
+program ipahelper, rclass
 	
 	version 17
 	
