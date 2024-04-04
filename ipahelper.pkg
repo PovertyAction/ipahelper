@@ -18,11 +18,11 @@ f ado/ipacolwidth.ado
 f ado/iparowformat.ado
 f ado/iparowline.ado
 d
-f sthlp/ipahelper.ado
-f sthlp/ipacellcolor.ado
-f sthlp/ipacellfont.ado
-f sthlp/ipacelltext.ado
-f sthlp/ipacolformat.ado
-f sthlp/ipacolwidth.ado
-f sthlp/iparowformat.ado
-f sthlp/iparowline.ado
+f sthlp/ipahelper.sthlp
+f sthlp/ipacellcolor.sthlp
+f sthlp/ipacellfont.sthlp
+f sthlp/ipacelltext.sthlp
+f sthlp/ipacolformat.sthlp
+f sthlp/ipacolwidth.sthlp
+f sthlp/iparowformat.sthlp
+f sthlp/iparowline.sthlp
