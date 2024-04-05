@@ -34,7 +34,7 @@ program define ipahelper_update
 		syntax, [branch(name)] url(string) [force]
 		
 		loc branch 	= cond("`branch'" ~= "", "`branch'", "main")
-		noi net install ipahelper, replace from("`url'/`branch'") `force'
+		noi net install ipahelper, all replace from("`url'/`branch'") `force'
 		
 	}
 	
