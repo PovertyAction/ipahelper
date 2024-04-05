@@ -125,7 +125,7 @@ program define ipahelper_version
 			
 			gen current = loc_vers + " " + loc_date
 			gen latest = git_vers + " " + git_date
-			noi list current latest update_available, noobs h sep(0) abbrev(32)
+			noi list program current latest update_available, noobs h sep(0) abbrev(32)
 			
 			count if update_available == "yes" 
 			loc update_cnt `r(N)'
@@ -135,7 +135,7 @@ program define ipahelper_version
 			count if update_available == ""
 			loc new_cnt `r(N)'
 			if `new_cnt' > 0 {
-				noi disp "`r(N)' new commands available"
+				noi disp "`r(N)' new programs available"
 			}
 			if `update_cnt' > 0 | `new_cnt' > 0 {
 				noi disp "Click {stata ipahelper update:here} to update"
