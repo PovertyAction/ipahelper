@@ -9,20 +9,30 @@ d Distribution-Date: 20240404
 d
 d Authors: Innovations for Poverty Action
 d Support: researchsupport@poverty-action.org
-f ado/ipahelper.ado
+f ado/ipaanycount.ado
 f ado/ipacellcolor.ado
 f ado/ipacellfont.ado
 f ado/ipacelltext.ado
 f ado/ipacolformat.ado
 f ado/ipacolwidth.ado
+f ado/ipagetcal.ado
+f ado/ipagettd.ado
+f ado/ipahelper.ado
+f ado/ipalabels.ado
 f ado/iparowformat.ado
 f ado/iparowline.ado
+f ado/ipasctocollate.ado
 d
-f sthlp/ipahelper.sthlp
+f sthlp/ipaanycount.sthlp
 f sthlp/ipacellcolor.sthlp
 f sthlp/ipacellfont.sthlp
 f sthlp/ipacelltext.sthlp
 f sthlp/ipacolformat.sthlp
 f sthlp/ipacolwidth.sthlp
+f sthlp/ipagetcal.sthlp
+f sthlp/ipagettd.sthlp
+f sthlp/ipahelper.sthlp
+f sthlp/ipalabels.sthlp
 f sthlp/iparowformat.sthlp
 f sthlp/iparowline.sthlp
+f sthlp/ipasctocollate.sthlp
