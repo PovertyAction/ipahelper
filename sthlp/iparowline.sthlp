@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 4.1.0 Innovations for Poverty Action 02Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 02Apr2024}{...}
 
 {cmd:iparowline} - Sets a black bottom border on Excel spreadsheet rows
 

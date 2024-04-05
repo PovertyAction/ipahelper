@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 4.1.0 Innovations for Poverty Action 02Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 02Apr2024}{...}
 
 {cmd:ipacolformat} - Set numeric formats for Excel cells based on Stata variables
 

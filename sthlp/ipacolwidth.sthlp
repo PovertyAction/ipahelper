@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 4.1.0 Innovations for Poverty Action 03Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 03Apr2024}{...}
 
 {cmd:ipacolwidth} - Automatically adjusts column widths in an Excel sheet
 

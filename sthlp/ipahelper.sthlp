@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 4.1.0 Innovations for Poverty Action 23Nov2022}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 23Nov2022}{...}
 
 {cmd:ipahelper} - Utility program for the ipahelper package
 

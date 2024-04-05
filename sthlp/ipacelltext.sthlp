@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 4.1.0 Innovations for Poverty Action 03Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 03Apr2024}{...}
 
 {cmd:ipacelltext} - Set text within specified Excel cells
 

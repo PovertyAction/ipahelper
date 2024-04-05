@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 4.1.0 Innovations for Poverty Action 02Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 02Apr2024}{...}
 
 {cmd:ipacellfont} - Set the font and font size for specified Excel cell ranges
 
