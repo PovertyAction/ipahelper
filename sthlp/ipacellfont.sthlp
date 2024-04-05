@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.0.0 Innovations for Poverty Action 02Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 05Apr2024}{...}
 
 {cmd:ipacellfont} - Set the font and font size for specified Excel cell ranges
 
@@ -17,12 +17,14 @@
 {synopthdr}
 {synoptline}
 {synopt:sheet(sheetname)} - Specify the sheet name{p_end}
-{synopt:rows({help numlist:numlist})} - Rows to format{p_end}
-{synopt:cols({help numlist:numlist})} - Columns to format{p_end}
-{synopt:fontname("fontname")} - Excel font name{p_end}
-{synopt:fontsize({help integer:integer})} - Font size{p_end}
+{synopt:* rows({help numlist:numlist})} - Rows to format{p_end}
+{synopt:* cols({help numlist:numlist})} - Columns to format{p_end}
+{synopt:* fontname("fontname")} - Excel font name{p_end}
+{synopt:* fontsize({help integer:integer})} - Font size{p_end}
 {synoptline}
 {p2colreset}{...}
+
+{phang}* Options {opt sheetname()}, {opt rows()}, {opt cols()}, {opt fontname()} and {opt fontsize()} are required.
 
 {title:Description} 
 
@@ -70,4 +72,4 @@
 
 {title:Also see}
 
-Related Help Files: {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}
+Related Help Files: {help ipahelper:ipahelper}, {help ipacheck:ipacheck}, {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}

@@ -16,11 +16,13 @@
 {synoptset 50 tabbed}{...}
 {synopthdr}
 {synoptline}
-{synopt:sheet(sheetname)} - Specify the Excel sheet name{p_end}
-{synopt:rows({help numlist:numlist})} - Rows to apply line to{p_end}
-{synopt:style({help mf_xl##style:style})} - Line style for the border{p_end}
+{synopt:* sheet(sheetname)} - Specify the Excel sheet name{p_end}
+{synopt:* rows({help numlist:numlist})} - Rows to apply line to{p_end}
+{synopt:* style({help mf_xl##style:style})} - Line style for the border{p_end}
 {synoptline}
 {p2colreset}{...}
+
+{phang}* Options {opt sheetname()}, {opt rows()} and {opt style()} are required.
 
 {title:Description} 
 

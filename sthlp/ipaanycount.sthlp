@@ -1,67 +1,51 @@
 {smcl}
-{* *! version 4.0.0 Innovations for Poverty Action 11may2022}{...}
+{* *! version 4.0.0 Innovations for Poverty Action 11May2022}{...}
 
-{phang}
-{cmd:ipaanycount} {c -} Returns the number of variables in varlist for which values 
-are equal to any integer value in a supplied numlist and any word value in supplied string values.{p_end}
+{cmd:ipaanycount} - Counts variables matching specified numeric and string criteria
 
 {title:Syntax}
 
 {pmore}
-{cmd:ipaanycount}
-{help varlist}
-{cmd:,}
-{opth gen:erate(newvar)}
+{cmd:ipaanycount} {help varlist}
+{cmd:,} {opth gen:erate(newvar)}
 [{it:{help ipaanycount##options:options}}]
 
 {marker options}
 {synoptset 23 tabbed}{...}
 {synopthdr}
 {synoptline}
-{synopt:* {opth gen:erate(newvar)}}generate new variable{p_end}
-{synopt:{opth num:val(numlist)}}numeric items to match{p_end}
-{synopt:{opt str:val("string")}}space seperate string items to match{p_end}
+{synopt:* {opth gen:erate(newvar)}} - Generate a new variable with the count{p_end}
+{synopt:  {opth num:val(numlist)}} - Numeric values to match{p_end}
+{synopt:  {opt str:val("string")}} - Space-separated string items to match{p_end}
 {synoptline}
 {p2colreset}{...}
 
 {title:Description} 
 
 {pstd}
-{cmd:ipaanycount} returns in a new variable the number of variables in the varlist 
-specified with values that match the list of items supplied in the {cmd:numval()} 
-and {cmd:strval()} options.
- 
+{cmd:ipaanycount} creates a new variable indicating the count of variables within the specified varlist that match any of the criteria provided in {cmd:numval()} and {cmd:strval()}. This function facilitates comprehensive analysis by identifying the prevalence of specified numeric and string values across multiple variables.
+
 {title:Options}
 
 {dlgtab:Main}
 
 {phang}
-{cmd:generate(newvar)} specifies the new variable to created with the count of variables 
-with values matching numlist speciffied in {cmd:numval} and wordlist specified in 
-{cmd:strval()}. 
+{cmd:generate(newvar)} - Specifies the name of the new variable to hold the count of matches from the specified criteria in {cmd:numval()} and {cmd:strval()}.
 
 {dlgtab:Specifications}
 
 {phang}
-{cmd:numval(numlist)} specifies the integer values to match. Although numval() does
-not accept the generic numeric missing value ".", it allows extended numeric missing
-values such as .a, .b, ... , .z.   
+{cmd:numval(numlist)} - Defines integer values for matching. While . (generic numeric missing) is not accepted, extended missing values (.a to .z) are permitted.
 
 {phang}
-{cmd:strval(numlist)} specifies the string values to match. {cmd:strval()} expects 
-a space seperated list of items. eg "-999" or "-888 -999". Note that when dealing with 
-strings, ipanycount matches words values contained in the variable. For instance strval("-999") will 
-match values of "-999" & "-999 -888" but will not match "-9991". This is useful 
-for counting values in select_multiple types of questions.  
+{cmd:strval("string")} - Determines the string values for matching, expecting a space-separated list (e.g., "-999" or "-888 -999"). It performs a word match, suitable for analyzing select_multiple question types, ensuring precise counts.
 
 {title:Examples} 
 
 {synoptline}
-  {text:Setup}
-	{phang}{com}   . use f_hr_lead_r* using "https://raw.githubusercontent.com/PovertyAction/high-frequency-checks/master/data/household_survey.dta", clear{p_end}
-
-  {text:count the number of don't know responses ie. -999}
-	{phang}{com}   . ipaanycount _all, gen(dk_count) str("-999"){p_end}
+  {text:Example 1: Counting specific responses}
+	{phang}{com}   . use "https://raw.githubusercontent.com/PovertyAction/high-frequency-checks/master/data/household_survey.dta", clear{p_end}
+	{phang}{com}   . ipaanycount _all, gen(dk_count) strval("-999"){p_end}
 {synoptline}
 
 {text}
@@ -71,4 +55,4 @@ for counting values in select_multiple types of questions.
 
 {title:Also see}
 
-Help: {help egen:[D] egen}
+Related Help: {help ipahelper:ipahelper}, {help ipacheck:ipacheck}, {help egen:[D] egen}, {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}

@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.0.0 Innovations for Poverty Action 02Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 05apr2024}{...}
 
 {cmd:ipacellcolor} - Apply a solid background color to Excel cells
 
@@ -16,12 +16,14 @@
 {synoptset 50 tabbed}{...}
 {synopthdr}
 {synoptline}
-{synopt:sheet(sheetname)} - Specify the sheet name{p_end}
-{synopt:rows({help numlist:numlist})} - Rows to format{p_end}
-{synopt:var({help varname:varname})} - Variable name{p_end}
-{synopt:color({help mf_xl##syn_format_colors:color})} - Background color{p_end}
+{synopt:* sheet(sheetname)} - Specify the sheet name{p_end}
+{synopt:* rows({help numlist:numlist})} - Rows to format{p_end}
+{synopt:* var({help varname:varname})} - Variable name{p_end}
+{synopt:* color({help mf_xl##syn_format_colors:color})} - Background color{p_end}
 {synoptline}
 {p2colreset}{...}
+
+{phang}* Options {opt sheetname()}, {opt rows()}, {opt var()} and {opt color()} are required.
 
 {title:Description} 
 

@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.0.0 Innovations for Poverty Action 03Apr2024}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 05Apr2024}{...}
 
 {cmd:ipacolwidth} - Automatically adjusts column widths in an Excel sheet
 
@@ -16,9 +16,11 @@
 {synoptset 50 tabbed}{...}
 {synopthdr}
 {synoptline}
-{synopt:sheet(sheetname)} - Target Excel sheet name{p_end}
+{synopt:* sheet(sheetname)} - Target Excel sheet name{p_end}
 {synoptline}
 {p2colreset}{...}
+
+{phang}* Option {opt sheetname()} is required.
 
 {title:Description} 
 
@@ -48,4 +50,4 @@
 
 {title:Also see}
 
-Related Help Files: {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}
+Related Help Files: {help ipahelper:ipahelper}, {help ipacheck:ipacheck}, {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}

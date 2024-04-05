@@ -16,12 +16,14 @@
 {synoptset 50 tabbed}{...}
 {synopthdr}
 {synoptline}
-{synopt:sheet(sheetname)} - Specify the sheet name{p_end}
-{synopt:row({help int:integer})} - Row number{p_end}
-{synopt:col({help int:integer})} - Column number{p_end}
-{synopt:text("text")} - Text to insert in the cell{p_end}
+{synopt:* sheet(sheetname)} - Specify the sheet name{p_end}
+{synopt:* row({help int:integer})} - Row number{p_end}
+{synopt:* col({help int:integer})} - Column number{p_end}
+{synopt:* text("text")} - Text to insert in the cell{p_end}
 {synoptline}
 {p2colreset}{...}
+
+{phang}* Options {opt sheetname()}, {opt row()}, {opt col()} and {opt text()} are required.
 
 {title:Description} 
 
@@ -66,4 +68,4 @@
 
 {title:Also see}
 
-Related Help Files: {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}
+Related Help Files: {help ipahelper:ipahelper}, {help ipacheck:ipacheck}, {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}

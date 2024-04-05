@@ -63,4 +63,4 @@
 
 {title:Also see}
 
-Related Help Files: {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}
+Related Help Files:  {help ipahelper:ipahelper}, {help ipacheck:ipacheck}, {help putexcel:[RPT] putexcel}, {help mf_xl:[M-5] xl()}

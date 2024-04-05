@@ -67,6 +67,11 @@ The {cmd:ipahelper} package includes the following commands:
 {synoptset 30 tabbed}{...}
 {synopthdr:Program}
 {synoptline}
+{synopt:{help ipasctocollate:ipasctocollate}} - collate and export a dataset from SurveyCTO generated text audit or comments files{p_end}
+{synopt:{help ipalabels:ipalabels}} - remove labels or values from variables{p_end}
+{synopt:{help ipagettd:ipagettd}} - convert datetime variables to date{p_end}
+{synopt:{help ipagetcal:ipagetcal}} - create a date calendar dataset{p_end}
+{synopt:{help ipaanycount:ipaanycount}} - create a variable that returns the number of variables in varlist for which values are equal to any specified integer/string value{p_end}
 {synopt:{help iparowline}} - Add a lower border line to rows in an Excel file{p_end}
 {synopt:{help ipacellcolor}} - Add a background color to cells in an Excel file{p_end}
 {synopt:{help ipacolwidth}} - Adjust column widths in an Excel file based on the length of dataset values{p_end}
@@ -84,4 +89,6 @@ The {cmd:ipahelper} package includes the following commands:
 {title:Author}
 
 {pstd}Ishmail Azindoo Baako, GRDS, Innovations for Poverty Action{p_end}
-{pstd}{it:Last updated: 04 Apr 2024 (v4.1.0)}{p_end}
+{pstd}{it:Last updated: 05 Apr 2024 (v1.0.0)}{p_end}
+
+Help: {help ipahelper:ipacheck:ipacheck}

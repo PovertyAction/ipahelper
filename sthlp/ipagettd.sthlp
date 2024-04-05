@@ -1,29 +1,25 @@
 {smcl}
-{* *! version 4.0.0 Innovations for Poverty Action 11may2022}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 11May2022}{...}
 
-{cmd:ipagettd} {c -} convert datetime variable to %td format date variable
+{cmd:ipagettd} - Convert datetime variables to %td format date variables
 
 {title:Syntax}
 
 {pmore}
-{cmd:ipagettd}
-{help varlist}
+{cmd:ipagettd} {help varlist}
 
 {title:Description} 
 
 {pstd}
-{cmd:ipagettd} converts a numeric datatime variable into a numeric date variable
-of %td {help datetime_display_formats:date} format. 
- 
+{cmd:ipagettd} converts numeric datetime variables into numeric date variables in %td {help datetime_display_formats:date} format. This process simplifies the handling and analysis of dates by converting them from potentially complex datetime formats (which include both date and time information) to a simpler date-only format, which is often more useful for data analysis and reporting purposes.
+
 {hline}
 
 {title:Examples} 
 
 {synoptline}
-  {text:Setup}
+  {text:Example 1: Converting datetime to date}
 	{phang}{com}   . use "https://raw.githubusercontent.com/PovertyAction/high-frequency-checks/master/data/household_survey.dta", clear{p_end}
-
-  {text:convert submissiondate, starttime and endtime from datetime to date}
 	{phang}{com}   . ipagettd submissiondate starttime endtime{p_end}
 {synoptline}
 
@@ -34,4 +30,4 @@ of %td {help datetime_display_formats:date} format.
 
 {title:Also see}
 
-Help: {help decode:[D] decode}, {help _strip_labels:[P] _strip_labels}
+Help: {help ipahelper}, {help ipacheck}, {help datetime:datetime formats}, {help date}, {help clock}

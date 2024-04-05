@@ -1,55 +1,43 @@
 {smcl}
-{* *! version 4.0.0 Innovations for Poverty Action 11may2022}{...}
+{* *! version 1.0.0 Innovations for Poverty Action 05Apr2024}{...}
 
-{cmd:ipalabels} {c -} remove value labels or values from numeric variables
+{cmd:ipalabels} - Convert numeric variables with labels to strings or remove their labels
 
 {title:Syntax}
 
 {pmore}
-{cmd:ipalabels}
-{help varlist}
-[{cmd:,}
-{it:{help ipalabels##options:options}}]
+{cmd:ipalabels} {help varlist}
+[{cmd:,} {it:{help ipalabels##options:options}}]
 
 {marker options}
 {synoptset 23 tabbed}{...}
 {synopthdr}
 {synoptline}
-{synopt:{opt nolab:el}}remove value labels{p_end}
+{synopt:{opt nolabel}} - Remove value labels from variables{p_end}
 {synoptline}
 {p2colreset}{...}
 
 {title:Description} 
 
 {pstd}
-{cmd:ipalabels} removes the value labels leaving the underlying values of numeric 
-variables or removes the underlying values leaving the value labels of numeric 
-variables with labels. Note that when {cmd:ipalabels} is used without the {cmd:nolabel}
-option, the {help data_types:data type} of the variable will be changed to a string
-storage type to accomodate the value labels. {cmd:ipalabels} will ignore any string
-variables specified in {cmd:varlist}. 
- 
+{cmd:ipalabels} is designed for two primary functions: converting numeric variables with value labels into string variables to preserve the label text, or removing the value labels while keeping the variables numeric. By default, without specifying options, {cmd:ipalabels} will convert numeric labeled variables into strings, utilizing the label texts as string values. When used with the {cmd:nolabel} option, it removes the value labels but retains the numeric nature of the variables. This command ignores string variables provided in {cmd:varlist}.
+
 {title:Options}
 
 {phang}
-{cmd:nolabel} specifies that the value labels of should be removed. By default
-{cmd:ipalabels} removes the values leaving the labels. 
+{cmd:nolabel} - Removes the value labels from the specified numeric variables, leaving the numeric values intact.
 
 {hline}
 
 {title:Examples} 
 
 {synoptline}
-  {text:Setup}
+  {text:Example 1: Convert labeled numeric variables to strings}
 	{phang}{com}   . sysuse auto, clear{p_end}
-
-  {text:remove values from the foreign variable}
 	{phang}{com}   . ipalabels foreign{p_end}
-{synoptline}
-  {text:Setup}
-	{phang}{com}   . sysuse auto, clear{p_end}
 
-  {text:remove value labels from the foreign variable}
+  {text:Example 2: Remove value labels from numeric variables}
+	{phang}{com}   . sysuse auto, clear{p_end}
 	{phang}{com}   . ipalabels foreign, nolabel{p_end}
 {synoptline}
 
@@ -60,4 +48,4 @@ variables specified in {cmd:varlist}.
 
 {title:Also see}
 
-Help: {help decode:[D] decode}, {help _strip_labels:[P] _strip_labels}
+Help: {help ipahelper}, {help ipacheck}, {help decode:[D] decode}, {help label drop:[D] label drop}

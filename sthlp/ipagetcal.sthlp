@@ -1,36 +1,27 @@
 {smcl}
-{* *! version 4.0.0 Innovations for Poverty Action 11may2022}{...}
+{* *! version 4.0.0 Innovations for Poverty Action 11May2022}{...}
 
-{cmd:ipagetcal} {c -} create a calendar dataset
+{cmd:ipagetcal} - Create a calendar dataset
 
 {title:Syntax}
 
 {pmore}
-{cmd:ipagetcal}
-{help varname}
-{cmd:, clear}
+{cmd:ipagetcal} {help varname}
+{cmd:,} {opt clear}
 
 {title:Description} 
 
 {pstd}
-{cmd:ipagetcal} creates a calendar dataset spanning the dates in {cmd:varname}.
-The resulting dataset includes the variable {cmd:index} which contains the number 
-for the current observation, {cmd:varname}, which contains the day date as well 
-as {cmd:week}, {cmd:month} and {cmd:year} which contains the week month and year 
-respectively for each date.  Note that the dates created are contineous from the 
-first to the last date value in {cmd:varname}. {cmd:ipagetcal} expectes a 
-date/datetime variable of %td, %tc or %tC format. 
- 
+{cmd:ipagetcal} generates a calendar dataset based on the range of dates found in {cmd:varname}. The produced dataset encompasses several variables: {cmd:index}, which enumerates the observations; {cmd:varname}, listing each date; and {cmd:week}, {cmd:month}, {cmd:year}, indicating the respective week, month, and year for every date. The sequence of dates runs continuously from the earliest to the latest date present in {cmd:varname}. This command requires {cmd:varname} to be in one of the recognized date/datetime formats (%td, %tc, or %tC).
+
 {hline}
 
 {title:Examples} 
 
 {synoptline}
-  {text:Setup}
+  {text:Example 1: Generating a Calendar Dataset}
 	{phang}{com}   . use "https://raw.githubusercontent.com/PovertyAction/high-frequency-checks/master/data/household_survey.dta", clear{p_end}
-
-  {text:create a calendar dataset from submissiondate}
-	{phang}{com}   . ipagetcal submissiondate{p_end}
+	{phang}{com}   . ipagetcal submissiondate, clear{p_end}
 {synoptline}
 
 {title:Stored results}
@@ -39,7 +30,7 @@ date/datetime variable of %td, %tc or %tC format.
 
 {synoptset 25 tabbed}{...}
 {syntab:{opt Scalars}}
-{synopt:{cmd: r(N_days)}}number number of days from first to last date{p_end}
+{synopt:{cmd: r(N_days)}} - The total number of days spanning from the first to the last date in {cmd:varname}{p_end}
 {p2colreset}{...}
 
 {text}
@@ -49,6 +40,4 @@ date/datetime variable of %td, %tc or %tC format.
 
 {title:Also see}
 
-Help: {help day:day}, {help week:week}, {help month:month}, {help year:year}
-
-Other commands in ipacheck: {help ipagettd:ipagettd}
+Related Help Files: {help ipahelper}, {help ipacheck}, {help date functions:[D] datetime functions}, {help format}, {help date}, {help clock}
