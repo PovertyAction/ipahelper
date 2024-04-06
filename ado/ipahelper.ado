@@ -16,8 +16,8 @@ program ipahelper, rclass
 			ex 198
 		}
 		
-		if "`version'" ~= "" & "`force'" ~= "" {
-			disp as err "options version and force are mutually exclusive"
+		if "`subcmd'" ~= "" & "`force'" ~= "" {
+			disp as err "Sub-command `subcmd' and option force are mutually exclusive"
 			ex 198
 		}
 		
