@@ -1,4 +1,4 @@
-*! version 1.0.0 02apr2024
+*! version 1.0.1 04sep2024
 *! Innovations for Poverty Action
 * iparowline: Add bottom border to rows
 
@@ -13,7 +13,7 @@ program define iparowline
 		loc rows = subinstr("`r(numlist)'", " ", ",", .)
 		
 		* parse into mata command
-		mata: addlines("`using'", "`sheet'", (`rows'), "`style'")
+		mata: rowline("`using'", "`sheet'", (`rows'), "`style'")
 		
 	}
 	
