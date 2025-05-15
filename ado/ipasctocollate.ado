@@ -114,12 +114,16 @@ program ipasctocollate, rclass
 			
 				forval i = 1/`import_cnt' {
 					frames frm_subset: loc file = `mediavar'[`i']
-					cap import delim using "`folder'/`file'.csv", clear stringcols(_all) varnames(1)
+					*cap import delim using "`folder'/`file'.csv", clear stringcols(_all) varnames(1)
+					cap insheet using "`folder'/`file'.csv", clear names
 					if _rc == 601 {
 						loc disptype 1
 						loc ++fail_cnt
 					}
 					else {
+						foreach var of varlist _all {
+							tostring `var', replace
+						}
 						gen `mediavar' = "`file'"
 						append using "`tmf_media'"
 						save "`tmf_media'", replace
